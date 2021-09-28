@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        #signup
+        {
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 150px;
+        }
+        #heading
+        {
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 70px;
+        
+        }
+    </style>
+</head>
+<body background="background.jpg">
+
+    <div id="heading">
+
+        <H1>Sign Up for Bennett Bulletin</H1>
+
+    </div>
+
+    <div id="signup">
+        <form>
+            User Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="Enter Your Name" name="name">
+            <br><br>
+
+            Bennett Email-ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="Enter Your Bennett Email-Id" pattern="[A-Z][0-9]{2}[A-Z]{3}[0-9]{3}[@][A-Z]{7}[.][A-Z]{3}[.][A-Z]{2}" 
+            name="part" title="Please Type Correct Bennett Email-ID." name="email">
+            <br><br>
+
+            <label for="cours">Select Course : 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input list="course" name="courses" placeholder="Select Your Course"></label>
+                <datalist id="course">
+                  <option value="BTech">
+                  <option value="BBA">
+                  <option value="BCA">
+                  <option value="BA Liberal Arts">
+                  <option value="BAJMC (English/ Hindi)">
+                  <option value="BA LLB/ BBA LLB (Hons)">
+                  <option value="BA Film, TV & Web Series">
+                </datalist>
+            <br><br>
+
+            Enter Batch : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Enter Your Batch" name="batch">
+            <br><br>
+
+            <label>Select Semester: 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input list="semester" name="semester" placeholder="Select Your Semester"></label>
+                <datalist id="semester">
+                    <option value="I">
+                    <option value="II">
+                    <option value="III">
+                    <option value="IV">
+                    <option value="V">
+                    <option value="VI">
+                    <option value="VII">
+                    <option value="VIII">
+                </datalist>
+            <br><br>
+
+            <button>Sign up</button>
+
+
+    
+        </form>
+
+    </div>
+
+    
+    
+</body>
+</html>
