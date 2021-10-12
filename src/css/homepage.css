@@ -14,35 +14,41 @@ header
 .logo
 {
     width: 2%;
-    height: 2%;
+    height: 1%;
     border-radius: 30px;
     margin-left: 3px;
-    margin-top: 2px;
-    
+    margin-top: 2px; 
 }
 
 .search-container
 {
     background-color: #272729;
-    margin-left: 10px;
-    margin-top: 3px;
+    margin-left: 15px;
+    margin-top: 5px;
     
 }
 
 .search
 {
     
-    border-radius: 4px;
+    /* border-radius: 4px;
     caret-color: white;
     background: no-repeat;
     color: white;
-    padding-left:30px; 
+    padding-left:30px;  */
+    background-color: #272729;
+    color: white;
+    caret-color: white;
 }
 
 .user
 {
     color:white;
-    margin: auto;
+    padding-top: 6px;
+    padding-left: 70px;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-plus
@@ -73,31 +79,48 @@ header
     font-size: 1rem;
     padding:2px 5px !important;
     background-color: #272729 !important;
+    font-size: 1rem !important;
     /* margin-bottom: 10px; */
 }
 
 .outer
 {
-    background-color: black;
+    background-color: #1c262e;
     height: fit-content;
 
 }
 
 .inner
 {
-    background-color: #272729;
+    
     color: white;
+    width: 1200px !important;
 
 }
 
 .post1
 {
+    margin-top: 30px;
+    background-color: #272729;
     border-color: white !important;
+    border-style: solid;
+    margin-bottom: 30px;
+    border-width: thin;
+}
+
+.post2
+{
+    background-color: #272729;
+    border-color: white !important;
+    border-style: solid;
+    margin-bottom: 20px;
+    border-width: thin;
 }
 
 .post-image
 {
-    width: 100%;
+    width: 50%;
+    height: 100%;
 }
 
 .hr-tag
@@ -111,4 +134,26 @@ header
     margin-left: 0px;
     margin-right: 2px;
 }
+
+.post-btn:hover{
+    background-color: yellow;
+    opacity: 0.2;
+}
+
+/* .fa-comment
+{
+    color: red !important;
+} */
+
+label
+{
+    color: white;
+}
+
+
+.checkbox-container{
+    border: 1px solid black;
+    width: 200px;
+}
+
 
