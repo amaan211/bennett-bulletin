@@ -17,107 +17,164 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Home</title>
   </head>
   <body>
+    
     <div>
       <header class="d-flex py-1 px-1">
         <img class="logo responsive" src="./src/img/logo.png" alt="logo" />
 
         <div class="search-container w-50 h-100">
           <form action="" class="">
-            <input type="text" class="search w-100 h-100" placeholder="Search Bb" />
+            <input
+              type="text"
+              class="search w-100 h-100"
+              placeholder="Search Bb"
+            />
           </form>
         </div>
-
-        <div class="add-post">
-            <button class="btn btn-dark btn-sm" name="add post">
-                <!-- <i class="fa fa-plus fa-lg"></i> -->
-                new post
+        <div class="d-flex">
+          <div class="add-post">
+            <button class="btn btn-dark btn-sm" name="add post" onclick="window.location.href='/AddAPost.html'">
+              <!-- <i class="fa fa-plus fa-lg"></i> -->
+              New Post
             </button>
             <button class="btn btn-dark btn-sm" name="add post">
-                <!-- <i class="fa fa-plus fa-lg"></i> -->
-                my posts
+              <!-- <i class="fa fa-plus fa-lg"></i> -->
+              My Posts
             </button>
             <button class="btn btn-dark btn-sm" name="add post">
-                <!-- <i class="fa fa-plus fa-lg"></i> -->
-                what's new?
+              <!-- <i class="fa fa-plus fa-lg"></i> -->
+              What's New?
             </button>
             <button class="btn btn-dark btn-sm" name="add post">
-                <!-- <i class="fa fa-plus fa-lg"></i> -->
-                notifications
+              <!-- <i class="fa fa-plus fa-lg"></i> -->
+              Notifications
+            </button>
+            <button class="btn btn-dark btn-sm" name="add post">
+              <!-- <i class="fa fa-plus fa-lg"></i> -->
+              Settings
             </button>
             <!-- <i class="fa fa-plus fa-lg"></i> -->
-            
-        </div>
+          </div>
+          <!-- <label for="cars">Welcome notamaan</label>
 
-        <div class="user">
-            Welcome, notamaan
+          <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select> -->
+
+          <a href="#">
+            <div class="user justify-content-center">Welcome, notamaan</div>
+          </a>
         </div>
-        
-        
       </header>
-
     </div>
+
+    
 
     <div class="outer d-flex justify-content-center">
-        <div class="inner w-50">
-            <div class="post1 p-3">
-                <h2>Test post 1</h2>
-                <br>
-                <p>
-                    The A380 is a modern icon that has flown over 500,000 revenue flights carrying over 190 million passengers. This includes more than 300 commercial flights per day, which take off or land around the world every two minutes.
-                </p>
-                <p>
-                    Flying with the A380 is a unique experience that introduces passengers to new standards of in-flight comfort, from first class to economy. As the world’s largest and most spacious passenger aircraft, its cabin allows travellers to stretch out in the widest seats in a calm and relaxing environment. With the unparalleled freedom it gives passengers to move about the aircraft, it’s no surprise that the A380 is a favourite in all cabin classes.
-                </p>
-                <p>
-                    The double-deck A380 makes excellent use of its space to offer passengers attainable luxury. With enough room to install stylish first-class suites, an eye-catching bar or business areas, beautifully inviting cabin lighting and the quietest cabin in the sky, passengers can enjoy every aspect of the flight and, thanks to innovative cabin air supply technology, will arrive at the destination feeling inspired and ready to go. The A380 Forward and aft lower-deck cargo compartments are equipped with semi-automatic Cargo Loading Systems, which operate independently.
-                </p>
-                <img class="post-image" src="./src/img/airbus_a380.jpg" alt="">
-                
-                <button class="btn btn-dark btn-sm post-btn">Like</button>
-                <button class="btn btn-dark btn-sm post-btn">Dislike</button>
+      <div class="inner">
+        <div class="post1 p-3">
+          <h2>Test post 1</h2>
+          <br />
+          <p>
+            The A380 is a modern icon that has flown over 500,000 revenue
+            flights carrying over 190 million passengers. This includes more
+            than 300 commercial flights per day, which take off or land around
+            the world every two minutes.
+          </p>
+          <p>
+            Flying with the A380 is a unique experience that introduces
+            passengers to new standards of in-flight comfort, from first class
+            to economy. As the world’s largest and most spacious passenger
+            aircraft, its cabin allows travellers to stretch out in the widest
+            seats in a calm and relaxing environment. With the unparalleled
+            freedom it gives passengers to move about the aircraft, it’s no
+            surprise that the A380 is a favourite in all cabin classes.
+          </p>
+          <p>
+            The double-deck A380 makes excellent use of its space to offer
+            passengers attainable luxury. With enough room to install stylish
+            first-class suites, an eye-catching bar or business areas,
+            beautifully inviting cabin lighting and the quietest cabin in the
+            sky, passengers can enjoy every aspect of the flight and, thanks to
+            innovative cabin air supply technology, will arrive at the
+            destination feeling inspired and ready to go. The A380 Forward and
+            aft lower-deck cargo compartments are equipped with semi-automatic
+            Cargo Loading Systems, which operate independently.
+          </p>
+          <div class="d-flex">
+            <img class="post-image" src="./src/img/airbus_a380.jpg" alt="" />
 
-                <button class="btn btn-dark btn-sm post-btn float-right">Comment</button>
-                <br>
-                <br>
-                <br>
-                <p class="hr-tag"></p>
-            </div>
-            
-            <div class="post2 p-3">
-                <h2>Test post 2</h2>
-                <br>
-                <p>
-                    The Queen's Gambit is one of the oldest known openings in chess. It was mentioned in the Göttingen manuscript of 1490 and was later analyzed by Gioachino Greco in the 17th century.In the 18th century, it was recommended by Philipp Stamma and is sometimes known as the Aleppo Gambit in his honor. During the early period of modern chess, queen pawn openings were not in fashion, and the Queen's Gambit did not become commonplace until the 1873 tournament in Vienna.
-                </p>
-                <p>
-                    As Wilhelm Steinitz and Siegbert Tarrasch developed chess theory and increased the appreciation of positional play, the Queen's Gambit grew more popular, reaching its zenith in the 1920s and 1930s, and it was played in all but 2 of 34 games in the 1927 World Championship match between José Raúl Capablanca and Alexander Alekhine.
-                </p>
-                <p>
-                    After the resumption of international chess activity following World War II, it was less frequently seen, as many players moved away from symmetrical openings, tending to use an Indian Defence to combat queen pawn openings; however, it is still frequently played.
-                </p>
+            <img class="post-image" src="./src/img/airbus_a380.jpg" alt="" />
+          </div>
 
-                <img class="post-image" src="./src/img/queens_gambit.png" alt="">
+          <button class="btn btn-dark btn-sm post-btn">
+            <i class="fa fa-thumbs-up fa-2x"></i>
+          </button>
+          <button class="btn btn-dark btn-sm post-btn">
+            <i class="fa fa-comment fa-2x"></i>
+          </button>
 
-
-                <button class="btn btn-dark btn-sm post-btn">Like</button>
-                <button class="btn btn-dark btn-sm post-btn">Dislike</button>
-
-                <button class="btn btn-dark btn-sm post-btn float-right">Comment</button>
-                <br>
-                <br>
-                <br>
-                <p class="hr-tag"></p>
-
-            </div>
+          <button class="btn btn-dark btn-sm post-btn float-right">
+            <i class="fa fa-thumbs-down fa-2x"></i>
+          </button>
         </div>
-        
+
+        <div class="post2 p-3">
+          <h2>Test post 2</h2>
+          <br />
+          <p>
+            The Queen's Gambit is one of the oldest known openings in chess. It
+            was mentioned in the Göttingen manuscript of 1490 and was later
+            analyzed by Gioachino Greco in the 17th century.In the 18th century,
+            it was recommended by Philipp Stamma and is sometimes known as the
+            Aleppo Gambit in his honor. During the early period of modern chess,
+            queen pawn openings were not in fashion, and the Queen's Gambit did
+            not become commonplace until the 1873 tournament in Vienna.
+          </p>
+          <p>
+            As Wilhelm Steinitz and Siegbert Tarrasch developed chess theory and
+            increased the appreciation of positional play, the Queen's Gambit
+            grew more popular, reaching its zenith in the 1920s and 1930s, and
+            it was played in all but 2 of 34 games in the 1927 World
+            Championship match between José Raúl Capablanca and Alexander
+            Alekhine.
+          </p>
+          <p>
+            After the resumption of international chess activity following World
+            War II, it was less frequently seen, as many players moved away from
+            symmetrical openings, tending to use an Indian Defence to combat
+            queen pawn openings; however, it is still frequently played.
+          </p>
+          <div class="d-flex">
+            <img class="post-image" src="./src/img/queens_gambit.png" alt="" />
+
+            <img class="post-image" src="./src/img/queens_gambit.png" alt="" />
+          </div>
+
+          <button class="btn btn-dark btn-sm post-btn">
+            <i class="fa fa-thumbs-up fa-2x"></i>
+          </button>
+          <button class="btn btn-dark btn-sm post-btn">
+            <i class="fa fa-comment fa-2x"></i>
+          </button>
+
+          <button class="btn btn-dark btn-sm post-btn float-right">
+            <i class="fa fa-thumbs-down fa-2x"></i>
+          </button>
+        </div>
+      </div>
     </div>
-
-
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
