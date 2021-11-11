@@ -33,8 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.get( '/login', function( req, res ) {
-    res.sendFile( path.join( __dirname, '/public/index.html'));
-    // console.log('1');
+    res.sendFile( path.join( __dirname, '/public/login.html'));
 });
 
 
@@ -42,7 +41,6 @@ app.get( '/login', function( req, res ) {
 
 app.get( '/sign_up', function( req, res ) {
     res.sendFile( path.join( __dirname, '/public/sign_up.html'));
-    // console.log('2');
     app.post('/sign_up', (req, res) => {
         // console.log(req.body)
         // res.send('hello')
@@ -63,7 +61,7 @@ app.get( '/sign_up', function( req, res ) {
         if(Password.length < 6){
             errors.push({msg: 'Passwords should be more than 5 characters'});
         }
-
+ 
         // sending errors
         if(errors.length > 0){
             res.sendFile( path.join( __dirname, '/public/sign_up.html'), {
@@ -109,7 +107,7 @@ app.get( '/sign_up', function( req, res ) {
                                 if(err) throw err;
                                 // set password to hash
                                 newuser.Password = hash;
-                                // newuser.Confirm_Paassword = hash;
+                                newuser.Confirm_Paassword = hash;
                                 // save user
                                 newuser.save()
                                     .then(User => {
@@ -130,14 +128,12 @@ app.get( '/sign_up', function( req, res ) {
 
 app.get( '/dashboard', function( req, res ) {
     res.sendFile( path.join( __dirname, '/public/homepage.html'));
-    // console.log('3');
 });
 
 
 
 app.get( '/add_post', function( req, res ) {
     res.sendFile( path.join( __dirname, '/public/post.html'));
-    // console.log('4');
 });
 
 
