@@ -45,7 +45,7 @@ app.use(session({
 }));
 
 // connect flash middleware
-app.use(flash());
+app.use(flash()); 
 
 
 
@@ -108,7 +108,7 @@ app.get( '/sign_up', ( req, res ) => {
                 Confirm_Paassword
             }); 
         }
-        else{
+        else{ 
             // Validation passed
             user.findOne({Bennett_email_id: Bennett_email_id})
                 .then(User => {
