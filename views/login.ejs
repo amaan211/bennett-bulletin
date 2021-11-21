@@ -20,6 +20,20 @@
 			<div class="top_body">
 
 
+
+
+
+
+				<% if(error != ''){ %>
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">
+						<%= error %>
+					</div>
+				<% } %> 
+
+
+
+
+
 				<% if(success_msg != ''){ %>
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
 						<%= success_msg %>
@@ -33,17 +47,24 @@
 				<% } %>
 
 
-				<form action="#" method="post">
-                    <input class="text" type="text" name="username" placeholder=" Username" required=""><br>
-                    <input class="text" type="password" name="password" placeholder="Password" required=""><br>
-					
-					
-					<a href="/dashboard"><input type="button" value="Log In" class="login"></a>
 
-					<div class="command">
-						New Here ? <a href=/sign_up>Sign Up Now!</a>
-					</div>	
+
+				<form action="" method="post">
+
+					<!-- <label for="email"></label> -->
+					<input type="text" name="email" class="text" placeholder="Enter Email" required=""><br>
+
+                    <!-- <input class="text" type="text" name="username" placeholder=" Username" required=""><br> -->
+                    <input class="text" type="Password" name="Password" placeholder="Password" required=""><br>
+					
+					
+					<button type="submit" class="login">Login</button>
+
+						
 				</form>
+				<div class="command">
+					New Here ? <a href=/sign_up>Sign Up Now!</a>
+				</div>
 
 														<!-- About us-->
 

@@ -3,9 +3,14 @@ const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-// const expressLayouts  = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
+
+
+
+// passport config 
+require('./config/passport')(passport);
 
 
 
@@ -18,9 +23,9 @@ mongoose.connect(db, { useNewUrlParser: true })
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log(err));
 
-
 // User model
 const user = require('./models/user');
+// const passp ort = require('./config/passport');
 
 
 
@@ -44,6 +49,14 @@ app.use(session({
     saveUninitialized: true
 }));
 
+
+
+// connect passport middleware 
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
 // connect flash middleware
 app.use(flash()); 
 
@@ -54,9 +67,10 @@ app.use(flash());
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     next();
 });
-
+ 
 
 
 
@@ -69,8 +83,21 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.get( '/login', ( req, res ) => {
-    res.render('login')
-}); 
+    res.render('login');
+    // console.log(123);
+
+
+// for authentication......below signup route
+    app.post('/login', (req, res, next) => {
+        passport.authenticate('local', {
+            successRedirect: '/dashboard',
+            failureRedirect: '/login',
+            failureFlash: true
+        })(req, res, next);
+    });
+
+});
+
 
 
  
@@ -157,17 +184,28 @@ app.get( '/sign_up', ( req, res ) => {
 });
 
 
-
-
 app.get( '/dashboard', ( req, res ) => {
     res.render('homepage');
-});
+});    
 
 
 
 app.get( '/add_post', ( req, res ) => {
     res.render('post');
 });
+
+
+// login a authentication
+// app.post('/login', (req, res, next) => {
+//     passport.authenticate('local', {
+//         successRedirect: '/dashboard',
+//         failureRedirect: '/login',
+//         failureFlash: true
+//     })(req, res, next);
+// });
+
+
+
 
 
 
