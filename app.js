@@ -25,7 +25,9 @@ mongoose.connect(db, { useNewUrlParser: true })
 
 // User model
 const user = require('./models/user');
-// const passp ort = require('./config/passport');
+const { post } = require('got');
+const posts = require('./models/posts');
+// const passport = require('./config/passport');
 
 
 
@@ -91,7 +93,7 @@ app.get( '/login', ( req, res ) => {
     app.post('/login', (req, res, next) => {
         passport.authenticate('local', {
             successRedirect: '/dashboard',
-            failureRedirect: '/login',
+            failureRedirect: '/dashboard',
             failureFlash: true
         })(req, res, next);
     });
@@ -190,9 +192,7 @@ app.get( '/dashboard', ( req, res ) => {
 
 
 
-app.get( '/add_post', ( req, res ) => {
-    res.render('post');
-});
+
 
 
 // login a authentication
@@ -206,7 +206,20 @@ app.get( '/add_post', ( req, res ) => {
 
 
 
+app.get( '/add_post', ( req, res ) => {
+    res.render('post');
+    app.post('/add_post', (req, res) => { 
+        const{ Title, Content, PostedAt } = req.body;
 
+        const newpost = new posts({
+            Title,
+            Content
+        });
+        newpost.save()
+        res.redirect('/dashboard');
+    }); 
+});
+  
 
 
 
